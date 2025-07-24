@@ -1,6 +1,6 @@
-# Registro de Usuarios con ShadCN + SCSS Modules + Next.js
+# Plataforma de Publicación de Anuncios
 
-Este proyecto incluye una interfaz para el formulario de registro de usuarios utilizando **Next.js**, **ShadCN UI**, y **SCSS Modules**. Se permite el registro clásico mediante formulario y también con **Google Sign-In** (a través de `next-auth`).
+Este proyecto es una plataforma web desarrollada con **Next.js** que permite a los usuarios publicar y visualizar anuncios. La interfaz está construida con **componentes de shadcn/ui**, se utilizan **SCSS Modules** para los estilos, y se integra autenticación con **Google**.
 
 ---
 
