@@ -1,0 +1,42 @@
+
+.section {
+    margin-top: 3rem;
+  
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .buttonAnuncio {
+      text-align: center;
+      margin-top: 1rem;
+      button {
+        cursor: pointer;
+      }
+    }
+  
+    .card {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+  
+      .title {
+        font-weight: 600;
+      }
+  
+      .price {
+        margin-top: 0.5rem;
+        color: #62bacb;
+      }
+    }
+}
+  

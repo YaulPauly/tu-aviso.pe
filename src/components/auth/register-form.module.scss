@@ -1,0 +1,53 @@
+.formWrapper {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.nameFields {
+  display: flex;
+  gap: 1rem;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.registerButton {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.separator {
+  margin: 2rem 0;
+}
+
+.googleButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.googleIcon {
+  font-size: 1.2rem;
+}

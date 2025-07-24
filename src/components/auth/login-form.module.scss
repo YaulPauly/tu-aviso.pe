@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+
+.card {
+  width: 100%;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.registerPrompt {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #667085;
+
+  a.registerLink {
+    margin-left: 0.25rem;
+    color: #1d4ed8;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #1e40af;
+    }
+  }
+}

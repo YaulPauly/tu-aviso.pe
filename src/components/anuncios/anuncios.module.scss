@@ -1,0 +1,47 @@
+.anunciosPage {
+    padding: 2rem;
+  }
+  
+.title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.input,
+.select {
+    min-width: 200px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+}
+
+.cardTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cardText {
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.cardPhone {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}

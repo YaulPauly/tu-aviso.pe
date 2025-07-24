@@ -1,0 +1,32 @@
+.section {
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+  
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+  
+    .steps {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .step {
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+  
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        color: #667085;
+      }
+    }
+}
+  
