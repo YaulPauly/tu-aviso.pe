@@ -1,9 +1,13 @@
-'use client'
+"use client";
 
-import { Input } from '../ui/input'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
-import styles from './anuncios.module.scss'
-
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../../ui/select";
+import styles from "./anuncios.module.scss";
 
 const AnunciosFilters = () => {
   return (
@@ -39,7 +43,7 @@ const AnunciosFilters = () => {
         </SelectContent>
       </Select>
     </div>
-  )
-}
+  );
+};
 
-export default AnunciosFilters
+export default AnunciosFilters;

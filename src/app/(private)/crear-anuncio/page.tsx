@@ -1,11 +1,7 @@
+import CreateAdForm from "@/src/components/form/create-ad-form";
 
+const CreateAdPage = () => {
+  return <CreateAdForm />;
+};
 
-const RegisterAdsPage = () => {
-  return (
-    <div>
-      Registrar Anuncio 
-    </div>
-  )
-}
-
-export default RegisterAdsPage
+export default CreateAdPage;

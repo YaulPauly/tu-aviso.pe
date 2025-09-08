@@ -14,21 +14,29 @@ Este proyecto es una plataforma web desarrollada con **Next.js** que permite a l
 
 ---
 
+## Requisitos Previos
+
+- Node.js v22.18.0 o superior
+
+```bash
+nvm i v22.18.0
+nvm use v22.18.0
+```
+
+---
+
 ## 🚀 Instalación
 
 1. Clona el repositorio:
 
-````bash
+```bash
 git clone https://github.com/tu-usuario/tu-repo.git
 cd tu-repo
 
 2. Instala las dependencias:
 
-```bash
 npm install
 
 3. Levanta el proyecto:
-
-```bash
 npm run dev
-````
+```

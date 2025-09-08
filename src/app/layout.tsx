@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import HeaderPublic from "../components/layout/header/header-public";
+import HeaderBoth from "../components/layout/header/header-both";
+import { AuthProvider } from "../context/auth-context";
+import Footer from "../components/layout/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anuncios Clasificados en Perú | tu-aviso.pe, tu espacio para publicar y encontrar",
+  title:
+    "Anuncios Clasificados en Perú | tu-aviso.pe, tu espacio para publicar y encontrar",
   description:
     "Explora los últimos anuncios clasificados en tu-aviso.pe. Publica gratis, compra y vende productos, servicios, inmuebles, vehículos y más en todo el Perú.",
   keywords: [
@@ -56,7 +59,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,8 +69,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <HeaderPublic />
-          {children}
+        <AuthProvider>
+          <div className="min-h-screen flex flex-col">
+            <HeaderBoth />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );

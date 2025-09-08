@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 
-import styles from "./register-form.module.scss";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
+import { Input } from "../../ui/input";
+import { Button } from "../../ui/button";
 import { Separator } from "@radix-ui/react-select";
 import { Label } from "@radix-ui/react-label";
+
+import styles from "./register-form.module.scss";
 
 export default function RegisterForm() {
   const [formData, setFormData] = useState({

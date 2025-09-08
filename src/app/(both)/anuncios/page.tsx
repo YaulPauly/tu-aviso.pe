@@ -1,14 +1,12 @@
-
-import Anuncios from "@/src/components/anuncios/anuncios"
-import Container from "@/src/components/layout/container/container"
-
+import Anuncios from "@/src/components/features/posts/anuncios";
+import Container from "@/src/components/layout/container/container";
 
 const AnunciosPage = () => {
   return (
     <Container>
-      <Anuncios/>
+      <Anuncios />
     </Container>
-  )
-}
+  );
+};
 
-export default AnunciosPage
+export default AnunciosPage;

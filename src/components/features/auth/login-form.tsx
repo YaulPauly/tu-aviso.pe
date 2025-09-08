@@ -1,9 +1,11 @@
 import { Label } from "@radix-ui/react-label";
-import { Card, CardContent, CardHeader } from "../ui/card";
-import styles from "./login-form.module.scss";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
 import Link from "next/link";
+
+import { Card, CardContent, CardHeader } from "../../ui/card";
+import { Input } from "../../ui/input";
+import { Button } from "../../ui/button";
+
+import styles from "./login-form.module.scss";
 
 const LoginForm = () => {
   return (

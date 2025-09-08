@@ -6,35 +6,106 @@
   flex-wrap: wrap;
   gap: 1rem;
   border-bottom: 1px solid #e5e5e5;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.75rem;
   }
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #000;
+  color: #0070f3;
   text-decoration: none;
   text-align: center;
+  transition: color 0.2s ease;
 
   a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.navLink {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #f3f4f6;
+    color: #0070f3;
+  }
+
+  &.active {
+    background-color: #eff6ff;
+    color: #0070f3;
+    border: 1px solid #e0f2fe;
   }
 }
 
 .search {
   flex: 1;
-  max-width: 400px;
+  max-width: 500px;
+  position: relative;
 
   input {
     width: 100%;
+    padding-left: 2.5rem;
   }
 
-  @media (max-width: 640px) {
+  .searchIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    pointer-events: none;
+  }
+
+  @media (max-width: 768px) {
     order: 3;
     max-width: 100%;
   }
@@ -42,35 +113,154 @@
 
 .actions {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
+  align-items: center;
 
-  a {
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .login {
-    background-color: transparent;
-    color: #333;
-    border: 1px solid #ccc;
-  }
-
-  .register {
-    background-color: #0070f3;
-    color: #fff;
-    border: 1px solid #0070f3;
-  }
-
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     justify-content: center;
     width: 100%;
     order: 2;
-
-    .login, .register {
-      width: 100%;
-      text-align: center;
-    }
   }
+}
+
+.authButton {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login {
+  @extend .authButton;
+  background-color: transparent;
+  color: #374151;
+  border: 1px solid #d1d5db;
+
+  &:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+  }
+}
+
+.register {
+  @extend .authButton;
+  background-color: #0070f3;
+  color: #fff;
+  border: 1px solid #0070f3;
+
+  &:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+}
+
+.publishButton {
+  @extend .authButton;
+  background-color: #059669;
+  color: #fff;
+  border: 1px solid #059669;
+
+  &:hover {
+    background-color: #047857;
+    border-color: #047857;
+  }
+}
+
+.back {
+  color: #6b7280;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    color: #0070f3;
+  }
+}
+
+.userMenu {
+  position: relative;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 50px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: #9ca3af;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #374151;
+}
+
+.userName {
+  font-weight: 500;
+  color: #374151;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+.mobileMenuButton {
+  display: none;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &.open {
+    display: block;
+  }
+}
+
+.mobileMenuContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
